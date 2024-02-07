@@ -87,8 +87,7 @@ pipeline{
                   usernameVariable: "USER",
                   passwordVariable: "PASS"
              )])  {
-                       echo "Username: $USER"
-                       echo "Password: $PASS"
+                      
                def curlCommand = "curl -u '${USER}:${PASS}' -T /var/lib/jenkins/workspace/jfrog_test/target/*.jar ${params.ArtifactoryURL}/artifactory/example-repo-local/"
                        echo "Executing curl command: $curlcommand"
                        sh curlCommand
