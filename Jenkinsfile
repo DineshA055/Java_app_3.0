@@ -77,8 +77,8 @@ pipeline{
         when { expression { params.action == 'create' } }
         steps{
             script{
-                def JfrogArtifactorycredentialsId = 'Jfrog-api'
-                      JfrogArtifactory(JfrogArtifactorycredentialsId)
+                def JfrogcredentialsId = 'Jfrog-api'
+                      Jfrog(JfrogArtifactorycredentialsId)
             }
         }
     }  
