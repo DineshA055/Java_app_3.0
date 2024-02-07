@@ -77,7 +77,7 @@ pipeline{
         when { expression { params.action == 'create' } }
         steps{
             script{
-                  'sh curl -X -u 'admin' -p 'Alliswell@5' -T /var/lib/jenkins/workspace/jfrog_test/target/*.jar http://3.109.184.227:8082/artifactory/example-repo-local/'
+                  'sh curl -X -u admin -p Alliswell@5 -T /var/lib/jenkins/workspace/jfrog_test/target/*.jar http://3.109.184.227:8082/artifactory/example-repo-local/'
             }
         }
     }  
