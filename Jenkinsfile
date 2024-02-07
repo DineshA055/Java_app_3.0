@@ -73,6 +73,16 @@ pipeline{
                }
             }
         }
+        stage('Jfrog Artifactory')
+        when { expression { params.action == 'create' } }
+        steps{
+            script{
+                def JfrogArtifactorycredentialsId = 'Jfrog-api'
+                   JfrogArtifactory(JfrogArtifactorycredentialsId)
+                
+            }
+        }
+    }  
         stage('Docker Image Build'){
          when { expression {  params.action == 'create' } }
             steps{
