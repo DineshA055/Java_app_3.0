@@ -78,7 +78,7 @@ pipeline{
         steps{
             script{
                   def JfrogcredentialsId = 'Jfrog-api'
-               //    JfrogArtifactory(JfrogcredentialsId)
+                    JfrogArtifactory(JfrogcredentialsId)
             }
         }
     }  
