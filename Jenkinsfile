@@ -87,7 +87,7 @@ pipeline{
                   usernameVariable: "USER",
                   passwordVariable: "PASS"
              )])  {
-               'sh curl -X PUT -u ${USER}:${PASS} -T /var/lib/jenkins/workspace/jfrog_test/target/*.jar ${params.ArtifactoryURL}/artifactory/example-repo-local/'
+               'sh curl -u ${USER}:${PASS} -T /var/lib/jenkins/workspace/jfrog_test/target/*.jar ${params.ArtifactoryURL}/artifactory/example-repo-local/'
             }
         }
     }  
