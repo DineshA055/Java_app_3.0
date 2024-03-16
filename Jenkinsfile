@@ -88,7 +88,7 @@ pipeline{
                   passwordVariable: "PASS"
              )])  {
                       
-               def curlcommand = "curl -u '${USER}:${PASS}' -T /var/lib/jenkins/workspace/jfrog_test/target/*.jar ${params.ArtifactoryURL}/artifactory/example-repo-local/"
+               def curlcommand = "curl -u '${USER}:${PASS}' -T /var/lib/jenkins/workspace/CICD_pipeline_java/target/kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar ${params.ArtifactoryURL}/artifactory/example-repo-local/"
                        echo "Executing curl command: $curlcommand"
                        sh curlcommand
             }
